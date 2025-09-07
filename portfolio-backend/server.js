@@ -5,6 +5,7 @@ import cors from "cors";
 
 import projectsRouter from "./routes/projects.js";
 import skillsRouter from "./routes/skills.js";
+import authRouter from "./routes/auth.js";
 
 dotenv.config();
 
@@ -14,6 +15,7 @@ app.use(express.json());
 
 app.use("/api/projects", projectsRouter);
 app.use("/api/skills", skillsRouter);
+app.use("/api/auth", authRouter);
 
 const PORT = process.env.PORT || 5000;
 

@@ -11,7 +11,7 @@ export default function App() {
       }}
     >
       <h1 style={{ margin: 0, color: "#222" }}>Hello World 👋</h1>
-      <p style={{ margin: 0, color: "#555" }}>Welcome to a simple React UI</p>
+      <p style={{ margin: 0, color: "#555" }}></p>
     </div>
   );
 }

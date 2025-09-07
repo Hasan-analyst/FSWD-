@@ -7,7 +7,7 @@ export default function Projects() {
   useEffect(() => {
     fetch("http://localhost:5000/api/projects")
       .then((response) => response.json())
-      .then((data) => setProjects(data || [])) // Ensure it's always an array
+      .then((data) => setProjects(data || [])) 
       .catch((error) => console.error("Error fetching projects:", error));
   }, []);
   return (

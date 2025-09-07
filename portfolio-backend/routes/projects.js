@@ -3,13 +3,11 @@ import Project from "../models/Project.js";
 
 const router = express.Router();
 
-// Get all projects
 router.get("/", async (req, res) => {
   const projects = await Project.find();
   res.json(projects);
 });
 
-// Add a new project
 router.post("/", async (req, res) => {
   try {
     const project = new Project(req.body);

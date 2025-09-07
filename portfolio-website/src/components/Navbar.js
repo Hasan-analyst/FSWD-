@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+import LogoutButton from "./LogoutButton";
 
-export default function Navbar() {
+export default function Navbar({ showLogout, onLogout }) {
   const [open, setOpen] = useState(false);
-  const closeMenu = () => setOpen(false);
+  // Don't close menu on click, keep navbar always visible
+  const closeMenu = () => {};
 
   return (
     <header className="nav">
@@ -36,6 +38,7 @@ export default function Navbar() {
           <a href="#contact" onClick={closeMenu}>
             Contact
           </a>
+          {showLogout && <LogoutButton onLogout={onLogout} />}
         </nav>
       </div>
     </header>

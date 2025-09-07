@@ -1,0 +1,99 @@
+:root {
+  --bg: #0f172a;
+  --panel: #0b1225;
+  --text: #e5e7eb;
+  --muted: #cbd5e1;
+  --border: rgba(255, 255, 255, 0.08);
+  --primary: #22d3ee;
+  --primary-contrast: #001015;
+}
+
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+}
+
+.auth-card {
+  background: linear-gradient(135deg, var(--panel) 80%, var(--primary) 100%);
+  border-radius: 20px;
+  box-shadow: 0 4px 32px rgba(34, 211, 238, 0.18);
+  padding: 2.5rem 2rem;
+  min-width: 340px;
+  max-width: 370px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--border);
+}
+
+.auth-card h2 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1.5px solid #22d3ee;
+  background: #111827;
+  color: #e5e7eb;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+.auth-card input:focus {
+  border: 2px solid #22d3ee;
+  outline: none;
+  box-shadow: 0 0 8px #22d3ee33;
+}
+
+.auth-card button {
+  width: 80%;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary);
+  color: var(--primary-contrast);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: filter 0.2s, background 0.2s;
+  box-shadow: 0 2px 8px rgba(34, 211, 238, 0.08);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.auth-card button.btn--outline {
+  background: transparent;
+  color: var(--primary);
+  border: 1.2px solid var(--primary);
+}
+.auth-card button:hover {
+  filter: brightness(1.08);
+  background: #38e1ff;
+}
+
+.auth-card .error {
+  color: #ef4444;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.auth-card .success {
+  color: #22d3ee;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
